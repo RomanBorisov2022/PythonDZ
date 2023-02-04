@@ -2,12 +2,8 @@
 # (т.е. числа вида 2k), не превосходящие числа N.
 # Пример 10: 0, 1, 2, 3
 
-n = int(input('Введите число N: '))
-k = 0
-m = []
-while 2**k < n:
-    a = 2**k
-    k += 1
-    m.append(a)
-    print(k)
-    print(m)
+n = int(input("Введите число N: "))
+k = 1
+while k < n:
+    print(k, end=' ')
+    k = k * 2
