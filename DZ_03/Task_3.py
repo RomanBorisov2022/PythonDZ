@@ -31,6 +31,6 @@ dictionary[4] = 'F, H, V, W, Y, Й, Ы'
 dictionary[5] = 'K, Ж, З, Х, Ц, Ч'
 dictionary[8] = 'J, X, Ш, Э, Ю'
 dictionary[10] = 'Q, Z, Ф, Щ, Ъ'
-print(dictionary)
+# print(dictionary)
 userInput = str(input('Введите слово: '))
-print(userInput)
+print(sum([k for i in userInput for k, v in dictionary.items() if i in v]))
