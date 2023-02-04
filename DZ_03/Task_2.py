@@ -8,3 +8,19 @@
 # 1 2 3 4 5
 # 6
 # -> 5
+
+list_1 = []
+n = int(input('Введите число элементов в массиве: '))
+for i in range(n):
+    i = i + 1
+    list_1.append(i)
+print(list_1)
+
+x = int(input('Введите искомый элемент: '))
+y = 0
+i = 0
+while i <= n:
+    if x == i:
+       y = i + 1
+    i += 1
+print(f'Ответ: {y}')

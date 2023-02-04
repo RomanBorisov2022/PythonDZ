@@ -8,8 +8,8 @@
 # -> 1
 
 list_1 = []
-a = int(input('Введите число элементов в массиве: '))
-for i in range(a):
+n = int(input('Введите число элементов в массиве: '))
+for i in range(n):
     i = i + 1
     list_1.append(i)
 print(list_1)
@@ -17,7 +17,7 @@ print(list_1)
 x = int(input('Введите искомый элемент: '))
 count = 0
 i = 0
-while i <= a:
+while i <= n:
     if x == i:
        count += 1
     i += 1
