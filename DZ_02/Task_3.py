@@ -10,12 +10,11 @@ import random
 import math
 
 list_1 = []
-n = 2
 x1 = random.randint(0, 1000)
 x2 = random.randint(0, 1000)
 list_1.append(x1)
 list_1.append(x2)
-print(f'Загаданные числа: {list_1}')
+# print(f'Загаданные числа: {list_1}')
 s = x1 + x2
 p = x1 * x2
 print(f'Сумма двух чисел: x1 + x2 = {s}')
