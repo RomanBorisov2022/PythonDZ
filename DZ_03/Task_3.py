@@ -23,14 +23,21 @@
 # Вывод:
 # 12
 
-dictionary = {}
-dictionary[1] = 'A, E, I, O, U, L, N, S, T, R, А, В, Е, И, Н, О, Р, С, Т'
-dictionary[2] = 'D, G, Д, К, Л, М, П, У'
-dictionary[3] = 'B, C, M, P, Б, Г, Ё, Ь, Я'
-dictionary[4] = 'F, H, V, W, Y, Й, Ы'
-dictionary[5] = 'K, Ж, З, Х, Ц, Ч'
-dictionary[8] = 'J, X, Ш, Э, Ю'
-dictionary[10] = 'Q, Z, Ф, Щ, Ъ'
+dictionary = {
+1:{'A','E','I','O','U','L','N','S','T','R','А','В','Е','И','Н','О','Р','С','Т'},
+2:{'D','G','Д','К','Л','М','П','У'},
+3:{'B','C','M','P','Б','Г','Ё','Ь','Я'},
+4:{'F','H','V','W','Y','Й','Ы'},
+5:{'K','Ж','З','Х','Ц','Ч'},
+8:{'J','X','Ш','Э','Ю'},
+10:{'Q','Z','Ф','Щ','Ъ'}
+}
 # print(dictionary)
-userInput = str(input('Введите слово БОЛЬШИМИ буквами: '))
-print(sum([k for i in userInput for k, v in dictionary.items() if i in v]))
+userInput = str(input('Введите слово: '))
+# print(sum([k for i in userInput for k, v in dictionary.items() if i in v]))
+sum = 0
+for i in userInput.upper():
+    for key, value in dictionary.items():
+        if i in value:
+            sum = sum + key
+print(f'Сумма очков: {sum}')
