@@ -13,3 +13,18 @@
 
 # 4 -> 1 2 3 4
 # 9
+
+
+import random
+n = []
+a = int(input('Введите колличество кустов: '))
+for i in range(a):
+    a = random.randint(0, 100)
+    n.append(a)
+print(n)
+
+sumMax = list()
+for i in range(len(n) - 1):
+    sumMax.append(n[i-1] + n[i] + n[i+1])
+sumMax.append(n[-2] + n[-1] + n[0])
+print(max(sumMax))
