@@ -3,3 +3,8 @@
 # Формула для получения n-го члена прогрессии: an = a1 + (n-1) * d.
 # Каждое число вводится с новой строки.
 
+numbers = int(input('Введите число элементов: '))
+first_number = int(input('Введите первое число: '))
+difference = int(input('Введите разность: ')) # разность
+
+print(*range(first_number, first_number + difference * numbers, difference))
