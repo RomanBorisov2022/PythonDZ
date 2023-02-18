@@ -11,10 +11,10 @@ from random import randint
 # print(*n)
 
 arr = [randint(1, 10) for i in range(int(input('Введите N: ')))]
-count = 0
 print(*arr)
 
+min_num = int(input('Введите минимум: '))
+max_num = int(input('Введите максимум: '))
 for i in range(len(arr)):
-    if arr[i - 1] < arr[i] > arr[(i + 1) % len(arr)]:
-        count += 1
-        print(i)
+    if min_num < arr[i] < max_num:
+        print(f'Индекс числа из заданного диапазона: ', i)

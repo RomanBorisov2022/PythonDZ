@@ -5,6 +5,6 @@
 
 numbers = int(input('Введите число элементов: '))
 first_number = int(input('Введите первое число: '))
-difference = int(input('Введите разность: ')) # разность
+difference = int(input('Введите разность: '))
 
 print(*range(first_number, first_number + difference * numbers, difference))
