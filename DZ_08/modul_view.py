@@ -11,6 +11,7 @@ def menu():
         7. Удалить  контакт
         8. Выход''')
     choice = int(input('Выберите пункт меню: '))
+    print('\n')
     return choice
 
 
@@ -19,16 +20,16 @@ def show_contacts(pb: list[dict]):
         print('Телефонная книга пуста или файл не открыт!')
     else:
         for i, contact in enumerate(pb, 1):
-            first_name = contact.get(first_name)
-            second_name = contact.get(second_name)
-            phone = contact.get(phone)
-            print(f'{i}. {first_name:<12} {second_name:<12} {phone:<15}')
+            name = contact.get('name')
+            phone = contact.get('phone')
+            comment = contact.get('comment')
+            print(f'{i}. {name:<20} {phone:<15} {comment:<20}')
 
 def new_contact_input():
-    first_name = input('Введите имя: ')
-    second_name = input('Введите фамилию: ')
+    name = input('Введите имя: ')
     phone = input('Введите номер телефона: ')
-    new_contact = {'first_name': first_name,
-                   'second_name':  second_name,
-                   'phone': phone}
+    comment = input('Введите комментарий: ')
+    new_contact = {'name': name,
+                   'phone':  phone,
+                   'comment': comment}
     return new_contact
