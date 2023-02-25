@@ -8,7 +8,7 @@ def open_file():
     global path
     file = open(path, 'r', encoding='UTF-8')
     data = file.readlines()
-    print(data)
+    # print(data)
     for contact in data:
         new = contact.strip().split(';')
         new_contact = {}

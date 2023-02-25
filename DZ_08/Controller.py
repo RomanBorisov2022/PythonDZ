@@ -8,10 +8,14 @@ def start():
 
         if choice == 1:
             manager.open_file()
+            print('Файл телефонного справочника открыт.')
+
         elif choice == 2:
             manager.save_file()
             print('\nКонтакт сохранен!')
+
         elif choice == 3:
+            print('________________Список контактов_______________ ')
             pb = manager.get()
             modul_view.show_contacts(pb)
             
