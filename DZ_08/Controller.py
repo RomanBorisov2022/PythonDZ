@@ -9,21 +9,21 @@ def start():
         if choice == 1:
             manager.open_file()
             print('Файл телефонного справочника открыт.')
-
+            print('_______________________________________________ ')
         elif choice == 2:
             manager.save_file()
             print('\nКонтакт сохранен!')
-
+            print('_______________________________________________ ')
         elif choice == 3:
             print('________________Список контактов_______________ ')
             pb = manager.get()
             modul_view.show_contacts(pb)
-            
+            print('_______________________________________________ ')
         elif choice == 4:
             new = modul_view.new_contact_input()
             manager.add(new)
             print('\nКонтакт добавлен!')
-
+            print('_______________________________________________ ')
         # elif choice == 5:
 
         # elif choice == 6:
