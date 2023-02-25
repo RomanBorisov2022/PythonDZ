@@ -43,8 +43,13 @@ def start():
             modul_view.show_contacts(result)
             print('_________________________________________________ ')
             
-        # elif choice == 7:
-
+        elif choice == 7:
+            print('_________________Список контактов________________ ')
+            modul_view.show_contacts(manager.get())
+            print('_________________________________________________ ')
+            ind = modul_view.input_id()
+            manager.delete_contact(ind)
+            print('_________________Контакт удалён!_________________ ')
         elif choice == 8:
             print('_________________________________________________ ')
             print('Программа завершила работу!\n')
