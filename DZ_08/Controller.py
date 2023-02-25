@@ -48,9 +48,13 @@ def start():
             modul_view.show_contacts(manager.get())
             print('_________________________________________________ ')
             ind = modul_view.input_id()
+            name = manager.get_name(ind)
+            modul_view.confirm('удалить', name)
             manager.delete_contact(ind)
-            print('_________________Контакт удалён!_________________ ')
         elif choice == 8:
+            # if manager.check_changes():
+            #     if modul_view.confirm_changes():
+            #         manager.save_file()
             print('_________________________________________________ ')
             print('Программа завершила работу!\n')
             break

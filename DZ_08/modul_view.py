@@ -22,7 +22,7 @@ def show_contacts(pb: list[dict]):
             name = contact.get('name')
             phone = contact.get('phone')
             comment = contact.get('comment')
-            print(f'{i}. {name:<20} {phone:<15} {comment:<20}')
+            print(f'{i}. {name:20} {phone:<15} {comment:<20}')
 
 def new_contact_input():
     name = input('Введите имя: ')
@@ -40,3 +40,13 @@ def find_contact():
 def input_id():
     ind = int(input('Введите индекс: '))
     return ind
+
+def confirm(condition: str, name: str):
+    answer = input(f'ВЫ действительно хотите {condition} контакт {name}? (y/n)')
+    if answer == 'y':
+        return True
+    return False
+
+def confirm_changes():
+    answer = input(f'У вас есть несохраненные изменения! Хотите их сохранить? (y/n)')
+    return True if answer == 'y' else False

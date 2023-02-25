@@ -1,5 +1,7 @@
+from copy import deepcopy
 
 phone_book = []
+new_phone_book = []
 path = 'save.txt'
 
 
@@ -17,6 +19,9 @@ def open_file():
         new_contact['comment'] = new[2]
         phone_book.append(new_contact)
     file.close()
+    new_phone_book = deepcopy(phone_book)
+    # print(phone_book)
+    # print(new_phone_book)
 
 def get():
     global phone_book
@@ -53,3 +58,14 @@ def change_contact(ind: int, contact: dict):
 def delete_contact(ind: int):
     global phone_book
     phone_book.pop(ind-1)
+
+def get_name(ind: int):
+    global phone_book
+    return phone_book[ind-1].get('name')
+
+def check_changes():
+    global phone_book
+    global new_phone_book
+    if phone_book != new_phone_book:
+        return True
+    return False
