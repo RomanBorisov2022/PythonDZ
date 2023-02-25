@@ -1,7 +1,7 @@
 
 
 def menu():
-    print('''\nВыберите пункт меню:
+    print('''\n______________Выберите пункт меню:______________
         1. Открыть файл
         2. Сохранить файл
         3. Показать контакты
@@ -10,8 +10,7 @@ def menu():
         6. Найти контакт
         7. Удалить  контакт
         8. Выход''')
-    choice = int(input('Ввод: '))
-    print('\n')
+    choice = int(input('Введите данные: '))
     return choice
 
 
@@ -33,3 +32,7 @@ def new_contact_input():
                    'phone':  phone,
                    'comment': comment}
     return new_contact
+
+def find_contact():
+    find = input('Введите искомый элемент: ')
+    return find
