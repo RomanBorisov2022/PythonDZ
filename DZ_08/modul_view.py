@@ -36,3 +36,7 @@ def new_contact_input():
 def find_contact():
     find = input('Введите искомый элемент: ')
     return find
+
+def input_id():
+    ind = int(input('Введите индекс: '))
+    return ind

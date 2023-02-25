@@ -44,3 +44,8 @@ def save_file():
     data = '\n'.join(data)
     with open(path, 'w', encoding='UTF-8') as file:
         file.write(data)
+
+def change_contact(ind: int, contact: dict):
+    global phone_book
+    phone_book.pop(ind-1)
+    phone_book.insert(ind-1, contact)
